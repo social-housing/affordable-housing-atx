@@ -9,16 +9,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Hello, world!</title>
   </head>
+  <header>
 
+  </header>
   <body>
+    <nav class="nav">
+      <a class="nav-link active" href="#">Austin Housing Match</a>
 
+    </nav>
+
+    <div class="container">
     <section>
       <form method="post" class="sign-up">
-        <hr class="thick">
-        <hr>
 
         <fieldset class="contact-info">
-
           <legend>Household Information</legend>
 
           <ul class="contact-info">
@@ -30,19 +34,19 @@
               <div class="news-heading">
                 <label class="news-format">Household Number</label>
                 <div>
-                  <input type="radio" id="one" value="one" name="household-number"><label for="one">1</label>
+                  <input type="radio" id="one" value="1" name="household-number"><label for="one">1</label>
                 </div>
                 <div>
-                  <input type="radio" id="two" value="two" name="household-number"><label for="two">2</label>
+                  <input type="radio" id="two" value="2" name="household-number"><label for="two">2</label>
                 </div>
                 <div>
-                  <input type="radio" id="three" value="three" name="household-number"><label for="three">3</label>
+                  <input type="radio" id="three" value="3" name="household-number"><label for="three">3</label>
                 </div>
                 <div>
-                  <input type="radio" id="four" value="four" name="household-number"><label for="four">4</label>
+                  <input type="radio" id="four" value="4" name="household-number"><label for="four">4</label>
                 </div>
                 <div>
-                  <input type="radio" id="five" value="five" name="household-number"><label for="five">5</label>
+                  <input type="radio" id="five" value="5" name="household-number"><label for="five">5</label>
                 </div>
               </div>
             </li>
@@ -62,7 +66,7 @@
     </section>
 
     <section id="result-display"></section> <!-- section to display results -->
-
+    </div>  <!-- main container -->
     <footer>
       <h4>Copyright Housing</h4>
     </footer>
