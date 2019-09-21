@@ -1,4 +1,4 @@
-const form = document.querySelector('#form');
+const form = document.querySelector('#housing-form');
 
 // function callApi(request) {
 //   $.ajax({
@@ -23,10 +23,10 @@ const form = document.querySelector('#form');
 //   return url;
 // }
 
-function resultDisplay(data) {
-  const resultDiv = document.querySelector('#result-display');
-  const resultUl = <ul></ul>
-}
+// function resultDisplay(data) {
+//   const resultDiv = document.querySelector('#result-display');
+//   const resultUl = <ul></ul>
+// }
 
 function onSubmit(event) {
   event.preventDevault();
