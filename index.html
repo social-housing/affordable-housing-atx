@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <title>Hello, world!</title>
   </head>
   <header>
@@ -22,9 +23,9 @@
       <p class="lead">Welcome to the Austin Affordable Housing Search Engine! Just enter in a City of Austin zip code, household size and your annual Income to return a list of Affordable Housing offerings in your area!</p>
     </div>
 
-    <div class="main-container">
+    <div class="sign-up">
     <section>
-      <form method="post" class="sign-up">
+      <form  id ="housing-form" method="post">
 
         <fieldset class="contact-info">
           <legend>Household Information</legend>
@@ -62,8 +63,8 @@
           </ul>
 
           <div class="input-buttons">
-            <a class="btn btn-primary" href="#" role="button">Submit</a>
-            <a class="btn btn-primary" href="#" role="button">Clear</a>
+            <button id="submit" class="btn btn-primary" type="submit">Submit</button>
+            <button id="clear" class="btn btn-primary">Clear</button>
           </div>
         </fieldset>
       </form>
