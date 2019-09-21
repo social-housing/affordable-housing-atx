@@ -1,3 +1,12 @@
 //****************************
 //Base Stylessheet
 //****************************
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+
+body {
+  font-family: 'Roboto', 'Helvetica' ,sans-serif;
+  text-align: center;
+  background-color: $color-primary;
+  color: $white;
+}

@@ -1,0 +1,30 @@
+//*********************
+//mixins
+//*********************
+
+//flex container
+@mixin flex-me(
+$disp: flex,
+$dir: null,
+$wrap: null,
+$just: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+}
+
+// Media queries
+@mixin mq($break) {
+  $value: map-get($breakpoints, $break);
+
+  @if $value == null {
+    @error "`#{$break}` is not a valid breakpoint name.";
+  }
+
+  @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
