@@ -1,38 +1,55 @@
-const form = document.querySelector('#housing-form');
+let button = document.querySelector('#submit');
 
-// function callApi(request) {
-//   $.ajax({
-//     url: makeUrl(request),
-//     type: 'GET',
-//     data: {
-//       '$limit' : 5000,
-//       '$$app_token' : 'R95CM3pwSQ746G08aNK2PQPO1'
-//     }
-//   })
-//     .done(function(data) {
-//       return data;
-//     });
-// }
+function callApi(request) {
+  const url = makeUrl(request);
+  console.log('url: ', url);
+  $.ajax({
+    url: url,
+    type: 'GET',
+    data: {
+      '$limit' : 5000,
+      '$$app_token' : 'R95CM3pwSQ746G08aNK2PQPO1'
+    }
+  })
+    .done(function(data) {
+      console.log('data: ', data);
+      return data;
+    });
+}
 
-// function makeUrl(request) {
-//   const zip_code = request.zip_code;
-//   const household = request.household;
-//   const income = request.income;
-//   const url = `https://data.austintexas.gov/resource/ngxp-99y3.json?zip_code=${zip_code}&_${household}_person_household=${income}`;
-//
-//   return url;
-// }
+function makeUrl(request) {
+  const zip_code = request.zip_code;
+  const url = `https://data.austintexas.gov/resource/ngxp-99y3.json?zip_code=${zip_code}`;
+  return url;
+}
 
 // function resultDisplay(data) {
 //   const resultDiv = document.querySelector('#result-display');
 //   const resultUl = <ul></ul>
 // }
 
-function onSubmit(event) {
-  event.preventDevault();
-  //const result = callApi(request);
-  console.log('hello event listener');
-  console.log('event: ', event);
+function householdValue() {
+  let ele = document.getElementsByName('household-number');
+  let result;
+  for (let i = 0; i < ele.length; i++) {
+    if(ele[i].checked) {
+      result = ele[i].value;
+    }
+  }
+  return result;
 }
 
-form.addEventListener('submit', onSubmit);
+button.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  const zip = parseInt(document.querySelector('#zip-code').value);
+  const household = parseInt(householdValue());
+  const income = parseInt(document.querySelector('#yearly-income').value);
+  const request = {
+    zip_code: zip,
+    household: household,
+    income: income
+  };
+  const result = callApi(request);
+  console.log('result: ', result);
+});
