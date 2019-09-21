@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -7,11 +7,64 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <title>Hello, world!</title>
   </head>
+
   <body>
-    <h1>Hello, world!</h1>
+
+    <section>
+      <form method="post" class="sign-up">
+        <hr class="thick">
+        <hr>
+
+        <fieldset class="contact-info">
+
+          <legend>Household Information</legend>
+
+          <ul class="contact-info">
+            <li class="zipcode">
+              <label for="zip-code">Zip Code</label>
+              <input type="text" id="zip-code" class="text-field" name="user_zip" placeholder="required" required>
+            </li>
+            <li>
+              <div class="news-heading">
+                <label class="news-format">Household Number</label>
+                <div>
+                  <input type="radio" id="one" value="one" name="household-number"><label for="one">1</label>
+                </div>
+                <div>
+                  <input type="radio" id="two" value="two" name="household-number"><label for="two">2</label>
+                </div>
+                <div>
+                  <input type="radio" id="three" value="three" name="household-number"><label for="three">3</label>
+                </div>
+                <div>
+                  <input type="radio" id="four" value="four" name="household-number"><label for="four">4</label>
+                </div>
+                <div>
+                  <input type="radio" id="five" value="five" name="household-number"><label for="five">5</label>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <label for="name">Yearly Income</label>
+              <input type="text" id="yearly-income" class="text-field" name="income" placeholder="required" required>
+            </li>
+          </ul>
+
+          <div class="input-buttons">
+            <a class="btn btn-primary" href="#" role="button">Submit</a>
+            <a class="btn btn-primary" href="#" role="button">Clear</a>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+    <footer>
+      <h4>Copyright The Code Review</h4>
+    </footer>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
