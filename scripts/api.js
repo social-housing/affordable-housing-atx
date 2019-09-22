@@ -1,7 +1,11 @@
 let button = document.querySelector('#submit');
 
-function computeRent() {
-  
+function computeRent(item, request) {
+  const householdNumber = request.household;
+  const key = `_${householdNumber}_person_household`;
+  const income = parseInt(item[key]);
+  const rent = (income * 0.3)/12;
+  return rent;
 }
 
 function makeUrl(request) {
@@ -10,18 +14,20 @@ function makeUrl(request) {
   return url;
 }
 
-function locationDisplay(items) {
+function locationDisplay(items, request) {
   const results = items.map(item => {
+    const rent = computeRent(item, request);
     return `<li>
-      ${item.project_name}<br> ${item.address} ${item.zip_code}
+      ${item.project_name}<br> ${item.address} ${item.zip_code}<br>
+      Estimated rent: $${rent}
     </li>`;
   }).join('\n');
   return `<ul>${results}</ul>`;
 }
 
-function resultDisplay(data) {
+function resultDisplay(data, request) {
   const resultDiv = document.querySelector('#result-display');
-  resultDiv.innerHTML = locationDisplay(data);
+  resultDiv.innerHTML = locationDisplay(data, request);
 }
 
 function householdValue() {
@@ -46,8 +52,7 @@ function callApi(request) {
     }
   })
     .done(function(data) {
-      console.log('data: ', data);
-      resultDisplay(data);
+      resultDisplay(data, request);
     });
 }
 
