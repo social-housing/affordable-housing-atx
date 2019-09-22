@@ -427,6 +427,16 @@ a {
   margin-bottom: 40px;
 }
 
+#result-display ul {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#result-display li {
+  margin-bottom: 1rem;
+}
+
 #housing-form {
   background-color: #fffcfc;
   border-radius: 0.5rem;
