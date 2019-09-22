@@ -61,10 +61,12 @@ li {
   display: flex;
 }
 
-.income .label {
-  margin: 2rem;
+.income label,
+.zipcode label {
+  width: 30%;
 }
 
-.income .input {
+.income input,
+.zipcode input {
   width: 70%;
 }
