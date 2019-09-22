@@ -40,13 +40,49 @@ body {
 
 .about-title,
 .resource-title {
-  @include mq('lg') {
-    margin-left: 26rem;
+  @include mq('md') {
+    margin-left: 8rem;
     margin-top: 6rem;
   }
 
+  @include mq('lg') {
+    margin-left: 15rem;
+    margin-top: 6rem;
+  }
+
+  @include mq('xl') {
+    margin-left: 20rem;
+    margin-top: 6rem;
+  }
+}
+
+.resource-title {
+  @include mq('md') {
+    margin-left: 5rem;
+    margin-top: 6rem;
+  }
+
+  @include mq('lg') {
+    margin-left: 12rem;
+    margin-top: 6rem;
+  }
+
+  @include mq('xl') {
+    margin-left: 18rem;
+    margin-top: 6rem;
+  }
 }
 
 a {
   color: $dark-blue;
+}
+
+#about-me,
+#additional-resources {
+  display: none;
+}
+
+
+#form-section {
+  margin-bottom: 6rem;
 }

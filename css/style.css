@@ -364,10 +364,43 @@ body {
   margin: 0 auto;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .about-title,
 .resource-title {
-    margin-left: 26rem;
+    margin-left: 8rem;
+    margin-top: 6rem;
+  }
+}
+@media (min-width: 992px) {
+  .about-title,
+.resource-title {
+    margin-left: 15rem;
+    margin-top: 6rem;
+  }
+}
+@media (min-width: 1200px) {
+  .about-title,
+.resource-title {
+    margin-left: 20rem;
+    margin-top: 6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .resource-title {
+    margin-left: 5rem;
+    margin-top: 6rem;
+  }
+}
+@media (min-width: 992px) {
+  .resource-title {
+    margin-left: 12rem;
+    margin-top: 6rem;
+  }
+}
+@media (min-width: 1200px) {
+  .resource-title {
+    margin-left: 18rem;
     margin-top: 6rem;
   }
 }
@@ -376,6 +409,25 @@ a {
   color: #052542;
 }
 
+#about-me,
+#additional-resources {
+  display: none;
+}
+
+#form-section {
+  margin-bottom: 6rem;
+}
+
+#housing-form {
+  background-color: #fffcfc;
+  border-radius: 0.5rem;
+  width: 70%;
+  color: #052542;
+  margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .sign-up {
   margin: 0 auto;
 }
@@ -401,6 +453,12 @@ li {
   margin-bottom: 1rem;
 }
 
+.text-field {
+  border: 1px solid #052542;
+  width: 100%;
+  padding: 5px;
+}
+
 .input-buttons {
   margin-top: 1.5rem;
   text-align: center;
@@ -412,6 +470,42 @@ li {
 
 .news-heading {
   display: flex;
+}
+
+.income,
+.zipcode {
+  display: flex;
+}
+
+.income .label {
+  margin: 2rem;
+}
+
+.income .input {
+  width: 70%;
+}
+
+#submit {
+  width: 200px;
+  margin: auto;
+  background-color: #f16c48;
+  margin-right: 15px;
+}
+
+#clear {
+  width: 200px;
+  margin: auto;
+  background-color: #f16c48;
+}
+
+#housing-form {
+  background-color: #fffcfc;
+  border-radius: 0.5rem;
+  width: 70%;
+  color: #052542;
+  margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .sign-up {
@@ -439,6 +533,12 @@ li {
   margin-bottom: 1rem;
 }
 
+.text-field {
+  border: 1px solid #052542;
+  width: 100%;
+  padding: 5px;
+}
+
 .input-buttons {
   margin-top: 1.5rem;
   text-align: center;
@@ -450,6 +550,19 @@ li {
 
 .news-heading {
   display: flex;
+}
+
+.income,
+.zipcode {
+  display: flex;
+}
+
+.income .label {
+  margin: 2rem;
+}
+
+.income .input {
+  width: 70%;
 }
 
 /*# sourceMappingURL=style.css.map */
