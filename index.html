@@ -29,10 +29,56 @@
     </nav>   <!-- main nav -->
 
       <!-- form-section -->
+    <style type="text/css">
+      /* .form-banner {
+        background-image: url(austin.jpg);
+        background-color: rgba(255, 255, 255, 0.4);
+        background-size: cover;
+        height: 400px;
+        opacity: 0.5;
+      }
+
+      #form-selection {
+        position: relative;
+        top: 200px; */
+
+        .form-banner,
+        .about-banner,
+        .resources-banner {
+          position: relative;
+          z-index: 3;
+          height: 400px;
+        }
+
+
+          .bg::after {
+          content: "";
+          display: block;
+          position: absolute;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          background-image: url('austin.jpg');
+          background-size: cover;
+          opacity: 0.3;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          border-radius: 20px;
+        }
+
+      }
+
+    </style>
+
     <section id="form-section">
-      <div class="jumbotron text-center">
-        <h1 class="display-4">Hello, Austin!</h1>
-        <p class="lead">Welcome to the Austin Affordable Housing Search Engine! Just enter in a City of Austin zip code, household size and your annual Income to return a list of Affordable Housing offerings in your area!</p>
+      <div class="form-banner">
+        <div class="bg"></div>
+        <div class="banner-text">
+          <h1 class="display-4">Hello, Austin!</h1>
+          <p class="lead">Welcome to the Austin Affordable Housing Search Engine! Just enter in a City of Austin zip code, household size and your annual Income to return a list of Affordable Housing offerings in your area!</p>
+        </div>
       </div>
       <form  id ="housing-form" method="post">
 
@@ -41,32 +87,32 @@
 
           <ul class="contact-info">
             <li class="zipcode">
-              <label for="zip-code">Zip Code</label>
+              <label class="mr-2" for="zip-code">Zip Code</label>
               <input type="text" id="zip-code" class="text-field" name="user_zip" placeholder="required" required>
             </li>
             <li>
               <div class="news-heading">
-                <label class="news-format">Household Number</label>
+                <label class="household mr-3">Household Number</label>
                 <div>
-                  <input type="radio" id="one" value="1" name="household-number"><label for="one">1</label>
+                  <input class="mr-2" type="radio" id="one" value="1" name="household-number"><label class="mr-3" for="one">1</label>
                 </div>
                 <div>
-                  <input type="radio" id="two" value="2" name="household-number"><label for="two">2</label>
+                  <input class="mr-2" type="radio" id="two" value="2" name="household-number"><label class="mr-3" for="two">2</label>
                 </div>
                 <div>
-                  <input type="radio" id="three" value="3" name="household-number"><label for="three">3</label>
+                  <input class="mr-2" type="radio" id="three" value="3" name="household-number"><label class="mr-3" for="three">3</label>
                 </div>
                 <div>
-                  <input type="radio" id="four" value="4" name="household-number"><label for="four">4</label>
+                  <input class="mr-2" type="radio" id="four" value="4" name="household-number"><label class="mr-3" for="four">4</label>
                 </div>
                 <div>
-                  <input type="radio" id="five" value="5" name="household-number"><label for="five">5</label>
+                  <input class="mr-2" type="radio" id="five" value="5" name="household-number"><label class="mr-3" for="five">5</label>
                 </div>
               </div>
             </li>
 
             <li>
-              <label for="name">Yearly Income</label>
+              <label class="mr-2" for="name">Yearly Income</label>
               <input type="text" id="yearly-income" class="text-field" name="income" placeholder="required" required>
             </li>
           </ul>
@@ -83,8 +129,11 @@
 
     <!-- about-me -->
     <section id="about-me">
-      <div class="about-jumbo jumbotron text-center">
-        <h1 class="display-4">About this project</h1>
+      <div class="about-banner">
+        <div class="bg"></div>
+        <div class="banner-text">
+          <h1 class="display-4 about-title">About this project</h1>
+        </div>
       </div>
       <!-- about-body -->
       <div>
@@ -107,8 +156,11 @@
 
     <!--add-resources-->
     <section id="additional-resources">
-      <div class="resources-jumbo jumbotron text-center">
-        <h1 class="display-4">Additional Resources</h1>
+      <div class="resources-banner">
+        <div class="bg"></div>
+        <div class="banner-text">
+          <h1 class="display-4 resource-title">Additional Resources</h1>
+        </div>
       </div>
       <div>
         <div class="row">
