@@ -5,3 +5,37 @@
 .sign-up {
   margin: 0 auto;
 }
+
+li {
+  list-style-type: none;
+}
+
+.contact-info legend {
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60%;
+  padding-left: 0;
+}
+
+.contact-info li {
+  align-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.input-buttons {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.input-buttons button {
+  margin-right: 3rem;
+}
+
+.news-heading {
+  display: flex;
+}

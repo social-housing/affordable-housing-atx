@@ -340,17 +340,116 @@ template {
 
 body {
   font-family: "Roboto", "Helvetica", sans-serif;
-  text-align: center;
-  background-color: #4ABDAC;
+  background-color: #67a69c;
   color: #fffcfc;
 }
 
-.sign-up {
+.form-banner,
+.about-banner,
+.resources-banner {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 6rem;
+  margin-top: 4rem;
+  width: 90%;
+}
+
+.banner-text {
+  position: absolute;
+  margin-top: 3rem;
+}
+
+.lead {
+  width: 80%;
   margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .about-title,
+.resource-title {
+    margin-left: 26rem;
+    margin-top: 6rem;
+  }
+}
+
+a {
+  color: #052542;
 }
 
 .sign-up {
   margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+.contact-info legend {
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60%;
+  padding-left: 0;
+}
+
+.contact-info li {
+  align-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.input-buttons {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.input-buttons button {
+  margin-right: 3rem;
+}
+
+.news-heading {
+  display: flex;
+}
+
+.sign-up {
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+.contact-info legend {
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60%;
+  padding-left: 0;
+}
+
+.contact-info li {
+  align-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.input-buttons {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.input-buttons button {
+  margin-right: 3rem;
+}
+
+.news-heading {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */

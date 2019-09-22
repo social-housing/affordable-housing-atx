@@ -17,47 +17,90 @@
     <nav class="nav">
       <a class="nav-link active" href="#">Austin Housing Match</a>
     </nav>   <!-- main nav -->
+      <!-- form-section -->
+    <style type="text/css">
+      /* .form-banner {
+        background-image: url(austin.jpg);
+        background-color: rgba(255, 255, 255, 0.4);
+        background-size: cover;
+        height: 400px;
+        opacity: 0.5;
+      }
 
-    <div class="jumbotron text-center">
-      <h1 class="display-4">Hello, Austin!</h1>
-      <p class="lead">Welcome to the Austin Affordable Housing Search Engine! Just enter in a City of Austin zip code, household size and your annual Income to return a list of Affordable Housing offerings in your area!</p>
-    </div>
+      #form-selection {
+        position: relative;
+        top: 200px; */
 
-    <div class="sign-up">
-    <section>
-      <form  name = "housing-form" method="post">
+        .form-banner,
+        .about-banner,
+        .resources-banner {
+          position: relative;
+          z-index: 3;
+          height: 400px;
+        }
 
+
+          .bg::after {
+          content: "";
+          display: block;
+          position: absolute;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          background-image: url('austin.jpg');
+          background-size: cover;
+          opacity: 0.3;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          border-radius: 20px;
+        }
+
+      }
+
+    </style>
+
+    <section id="form-section">
+      <div class="form-banner">
+        <div class="bg"></div>
+        <div class="banner-text">
+          <h1 class="display-4">Hello, Austin!</h1>
+          <p class="lead">Welcome to the Austin Affordable Housing Search Engine! Just enter in a City of Austin zip code, household size and your annual Income to return a list of Affordable Housing offerings in your area!</p>
+        </div>
+      </div>
+      <form  id ="housing-form" method="post">
         <fieldset class="contact-info">
           <legend>Household Information</legend>
 
           <ul class="contact-info">
             <li class="zipcode">
-              <label for="zip-code">Zip Code</label>
+              <label class="mr-2" for="zip-code">Zip Code</label>
               <input type="text" id="zip-code" class="text-field" name="user_zip" placeholder="required" required>
             </li>
             <li>
               <div class="news-heading">
-                <label class="news-format">Household Number</label>
+                <label class="household mr-3">Household Number</label>
                 <div>
-                  <input type="radio" id="one" value="1" name="household-number"><label for="one">1</label>
+                  <input class="mr-2" type="radio" id="one" value="1" name="household-number"><label class="mr-3" for="one">1</label>
                 </div>
                 <div>
-                  <input type="radio" id="two" value="2" name="household-number"><label for="two">2</label>
+                  <input class="mr-2" type="radio" id="two" value="2" name="household-number"><label class="mr-3" for="two">2</label>
                 </div>
                 <div>
-                  <input type="radio" id="three" value="3" name="household-number"><label for="three">3</label>
+                  <input class="mr-2" type="radio" id="three" value="3" name="household-number"><label class="mr-3" for="three">3</label>
                 </div>
                 <div>
-                  <input type="radio" id="four" value="4" name="household-number"><label for="four">4</label>
+                  <input class="mr-2" type="radio" id="four" value="4" name="household-number"><label class="mr-3" for="four">4</label>
                 </div>
                 <div>
-                  <input type="radio" id="five" value="5" name="household-number"><label for="five">5</label>
+                  <input class="mr-2" type="radio" id="five" value="5" name="household-number"><label class="mr-3" for="five">5</label>
                 </div>
               </div>
             </li>
 
             <li>
-              <label for="name">Yearly Income</label>
+              <label class="mr-2" for="name">Yearly Income</label>
               <input type="text" id="yearly-income" class="text-field" name="income" placeholder="required" required>
             </li>
           </ul>
@@ -70,10 +113,53 @@
       </form>
     </section>
 
-    <section id="result-display"></section> <!-- section to display results -->
+    <section id="result-display"></section> <!-- section to display results
+    <!-- about-me -->
+    <section id="about-me">
+      <div class="about-banner">
+        <div class="bg"></div>
+        <div class="banner-text">
+          <h1 class="display-4 about-title">About this project</h1>
+        </div>
+      </div>
+      <!-- about-body -->
+      <div>
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+           <p>This project was inspired and powered by the Women Who Code (<a href="https://www.womenwhocode.com">https://www.womenwhocode.com</a>) 5th Austin Diversity Hackathon (2019) and Open Austin (<a href="https://www.open-austin.org/projects/">https://www.open-austin.org/projects/</a>").
+             As a volunteer financial coach for Prosper Centers, a part of Foundation Communities (<a href="https://foundcom.org">https://foundcom.org</a>) in Austin, TX,
+             I want to connect clients with more and better financial resources and information to plan and make the best possible decisions, to empower themselves and their families.</p>
 
-    </div>  <!-- main container -->
+            <p> Currently, this application allows clients interested in affordable housing programs in the Austin area to estimate their maximum rental cost for properties in different areas of Austin.
+              We look forward to expanding this project to include other information clients find helpful in making better financial decisions.
+              Please contact alexandra@alexandrahubbard.com for information you'd like to see on this app and/or add some your ideas and join the project here: <a href="https://github.com/social-housing/affordable-housing-atx">https://github.com/social-housing/affordable-housing-atx</a>.</p>
 
+              <p>Special thanks to the original Hackathon team that brought this idea to life: Stephanie Caulley, Steven De Avila, Charisse Giles, Devin Dias and Alexandra Hubbard. </p>
+
+          </div>
+        </div>
+      </div>  <!-- /about-body -->
+    </section><!-- /about-me -->
+
+    <!--add-resources-->
+    <section id="additional-resources">
+      <div class="resources-banner">
+        <div class="bg"></div>
+        <div class="banner-text">
+          <h1 class="display-4 resource-title">Additional Resources</h1>
+        </div>
+      </div>
+      <div>
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <p>To contribute and use this project: <a href="https://github.com/social-housing/affordable-housing-atx">https://github.com/social-housing/affordable-housing-atx</a></p>
+            <p>Open Austin Projects: <a href="https://www.open-austin.org/projects/">https://www.open-austin.org/projects/</a></p>
+            <p>Foundation Communities Prosper Centers: <a href="https://foundcom.org/prosper-centers/">https://foundcom.org/prosper-centers/</a></p>
+            <p>Women Who Code: <a href="https://www.womenwhocode.com/">https://www.womenwhocode.com/</a></p>
+          </div>
+        </div>
+      </div>
+    </section><!--/add-resources-->
     <footer>
       <h4>Copyright Housing</h4>
     </footer>

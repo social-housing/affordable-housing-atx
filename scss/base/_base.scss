@@ -6,7 +6,47 @@
 
 body {
   font-family: 'Roboto', 'Helvetica' ,sans-serif;
-  text-align: center;
   background-color: $color-primary;
   color: $white;
+}
+
+
+.form-banner,
+.about-banner,
+.resources-banner {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 6rem;
+  margin-top: 4rem;
+  width: 90%;
+}
+
+.banner-text {
+  position: absolute;
+  margin-top: 3rem;
+}
+
+// .form-banner h1,
+// .form-banner p {
+//
+// }
+//
+
+
+.lead {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-title,
+.resource-title {
+  @include mq('lg') {
+    margin-left: 26rem;
+    margin-top: 6rem;
+  }
+
+}
+
+a {
+  color: $dark-blue;
 }
