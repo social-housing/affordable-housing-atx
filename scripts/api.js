@@ -67,5 +67,6 @@ button.addEventListener('click', async (event) => {
     household: household,
     income: income
   };
+
   callApi(request);
 });
