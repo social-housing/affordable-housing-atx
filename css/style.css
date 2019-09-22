@@ -437,6 +437,14 @@ a {
   margin-bottom: 1rem;
 }
 
+#result-display p {
+  color: red;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 #housing-form {
   background-color: #fffcfc;
   border-radius: 0.5rem;
