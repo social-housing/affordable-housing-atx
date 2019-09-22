@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
     <title>Hello, world!</title>
   </head>
   <header>
@@ -16,20 +16,11 @@
   <body>
     <nav class="nav">
       <a class="nav-link active" href="#">Austin Housing Match</a>
+      <a class="nav-link active" href="#">About</a>
+      <a class="nav-link active" href="#">Additional Resources</a>
     </nav>   <!-- main nav -->
       <!-- form-section -->
     <style type="text/css">
-      /* .form-banner {
-        background-image: url(austin.jpg);
-        background-color: rgba(255, 255, 255, 0.4);
-        background-size: cover;
-        height: 400px;
-        opacity: 0.5;
-      }
-
-      #form-selection {
-        position: relative;
-        top: 200px; */
 
         .form-banner,
         .about-banner,
@@ -65,7 +56,7 @@
       <div class="form-banner">
         <div class="bg"></div>
         <div class="banner-text">
-          <h1 class="display-4">Hello, Austin!</h1>
+          <h1 class="display-4">Austin Housing Match</h1>
           <p class="lead">Welcome to the Austin Affordable Housing Search Engine! Just enter in a City of Austin zip code, household size and your annual Income to return a list of Affordable Housing offerings in your area!</p>
         </div>
       </div>
@@ -99,7 +90,7 @@
               </div>
             </li>
 
-            <li>
+            <li class="income">
               <label class="mr-2" for="name">Yearly Income</label>
               <input type="text" id="yearly-income" class="text-field" name="income" placeholder="required" required>
             </li>
@@ -113,7 +104,10 @@
       </form>
     </section>
 
-    <section id="result-display"></section> <!-- section to display results
+    <section id="result-display">
+
+    </section> <!-- section to display results
+
     <!-- about-me -->
     <section id="about-me">
       <div class="about-banner">
@@ -121,8 +115,8 @@
         <div class="banner-text">
           <h1 class="display-4 about-title">About this project</h1>
         </div>
-      </div>
-      <!-- about-body -->
+      </div>  <!-- about-body -->
+
       <div>
         <div class="row">
           <div class="col-md-6 offset-md-3">
@@ -160,8 +154,9 @@
         </div>
       </div>
     </section><!--/add-resources-->
-    <footer>
-      <h4>Copyright Housing</h4>
+
+    <footer class="text-center">
+      <h4>&copy; Austin Housing Match 2019</h4>
     </footer>
 
 
