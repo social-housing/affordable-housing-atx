@@ -1,18 +1,20 @@
 let button = document.querySelector('#submit');
 
+function computeRent() {
+  
+}
+
 function makeUrl(request) {
   const zip_code = request.zip_code;
   const url = `https://data.austintexas.gov/resource/ngxp-99y3.json?zip_code=${zip_code}`;
   return url;
 }
 
-
-
 function locationDisplay(items) {
   const results = items.map(item => {
     return `<li>
       ${item.project_name}<br> ${item.address} ${item.zip_code}
-    </li>`
+    </li>`;
   }).join('\n');
   return `<ul>${results}</ul>`;
 }
