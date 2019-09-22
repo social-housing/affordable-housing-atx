@@ -7,27 +7,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <title>Hello, world!</title>
   </head>
+  <header>
 
+  </header>
   <body>
-    <nav class="main-nav navbar navbar-light" class="navbar">
-      <nav class="nav-toggle navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="index.html"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="form-btn nav-item nav-link" href="#">Austin Housing Match</a>
-            <a class="about-btn nav-item nav-link" href="#">About<span class="sr-only">(current)</span></a>
-            <a class="resource-btn nav-item nav-link" href="#">Additional Resources</a>
-          </div>
-        </div>
-      </nav>
+    <nav class="nav">
+      <a class="nav-link active" href="#">Austin Housing Match</a>
     </nav>   <!-- main nav -->
-
       <!-- form-section -->
     <style type="text/css">
       /* .form-banner {
@@ -81,7 +70,6 @@
         </div>
       </div>
       <form  id ="housing-form" method="post">
-
         <fieldset class="contact-info">
           <legend>Household Information</legend>
 
@@ -123,10 +111,9 @@
           </div>
         </fieldset>
       </form>
-    </section> <!-- /form-section -->
+    </section>
 
-    <section id="result-display"></section> <!-- section to display results -->
-
+    <section id="result-display"></section> <!-- section to display results
     <!-- about-me -->
     <section id="about-me">
       <div class="about-banner">
@@ -182,8 +169,11 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="scripts/api.js"></script>
   </body>
 </html>
