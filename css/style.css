@@ -418,6 +418,15 @@ a {
   margin-bottom: 6rem;
 }
 
+#result-display {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #fffcfc;
+  color: #052542;
+  border-radius: 0.5rem;
+  margin-bottom: 40px;
+}
+
 #housing-form {
   background-color: #fffcfc;
   border-radius: 0.5rem;
@@ -477,11 +486,13 @@ li {
   display: flex;
 }
 
-.income .label {
-  margin: 2rem;
+.income label,
+.zipcode label {
+  width: 30%;
 }
 
-.income .input {
+.income input,
+.zipcode input {
   width: 70%;
 }
 
@@ -557,11 +568,13 @@ li {
   display: flex;
 }
 
-.income .label {
-  margin: 2rem;
+.income label,
+.zipcode label {
+  width: 30%;
 }
 
-.income .input {
+.income input,
+.zipcode input {
   width: 70%;
 }
 
