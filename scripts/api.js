@@ -56,6 +56,32 @@ function callApi(request) {
     });
 }
 
+function checkZipCode(request) {
+  const allCodes = [
+    78759, 78758, 78757,
+    78756, 78754, 78753,
+    78752, 78751, 78750,
+    78749, 78748, 78747,
+    78745, 78744, 78741,
+    78735, 78730, 78727,
+    78724, 78723, 78722,
+    78721, 78717, 78705,
+    78704, 78703, 78702,
+    78701, 78652, 78617
+  ];
+  const include = allCodes.includes(request.zip_code);
+
+  if(include) {
+    callApi(request);
+  } else {
+    const resultDiv = document.querySelector('#result-display');
+    const paragraph = document.createElement('p');
+    const message = document.createTextNode('There is no data available for that zip code.');
+    paragraph.appendChild(message);
+    resultDiv.appendChild(paragraph);
+  }
+}
+
 button.addEventListener('click', async (event) => {
   event.preventDefault();
 
@@ -68,5 +94,5 @@ button.addEventListener('click', async (event) => {
     income: income
   };
 
-  callApi(request);
+  checkZipCode(request);
 });
