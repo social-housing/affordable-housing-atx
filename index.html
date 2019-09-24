@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Austin Housing Match</title>
   </head>
@@ -14,11 +15,18 @@
 
   </header>
   <body>
-    <nav class="nav">
-      <a class="nav-link active" href="#">Austin Housing Match</a>
-      <a class="nav-link active" href="#">About</a>
-      <a class="nav-link active" href="#">Additional Resources</a>
-    </nav>   <!-- main nav -->
+    <nav class="main-nav navbar navbar-expand-lg navbar-light fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" href="#">Austin Housing Match</a>
+          <a class="nav-link active" href="#">About</a>
+          <a class="nav-link active" href="#">Additional Resources</a>
+        </div>   <!-- main nav -->
+      </div>
+  </nav>
       <!-- form-section -->
     <style type="text/css">
 
@@ -56,7 +64,7 @@
       <div class="form-banner">
         <div class="bg"></div>
         <div class="banner-text">
-          <h1 class="display-sm-1 display-4">Austin Housing Match</h1>
+          <h1 class="">Austin Housing Match</h1>
           <p class="lead">Welcome to the Austin Affordable Housing Search Engine! Just enter in a City of Austin zip code, household size and your annual Income to return a list of Affordable Housing offerings in your area!</p>
         </div>
       </div>
@@ -72,20 +80,22 @@
             <li>
               <div class="news-heading">
                 <label class="household mr-3">Household Number</label>
-                <div>
-                  <input class="mr-2" type="radio" id="one" value="1" name="household-number" checked><label class="mr-3" for="one">1</label>
-                </div>
-                <div>
-                  <input class="mr-2" type="radio" id="two" value="2" name="household-number"><label class="mr-3" for="two">2</label>
-                </div>
-                <div>
-                  <input class="mr-2" type="radio" id="three" value="3" name="household-number"><label class="mr-3" for="three">3</label>
-                </div>
-                <div>
-                  <input class="mr-2" type="radio" id="four" value="4" name="household-number"><label class="mr-3" for="four">4</label>
-                </div>
-                <div>
-                  <input class="mr-2" type="radio" id="five" value="5" name="household-number"><label class="mr-3" for="five">5</label>
+                <div class="radio-buttons">
+                  <div>
+                    <input class="mr-2" type="radio" id="one" value="1" name="household-number" checked><label class="mr-3" for="one">1</label>
+                  </div>
+                  <div>
+                    <input class="mr-2" type="radio" id="two" value="2" name="household-number"><label class="mr-3" for="two">2</label>
+                  </div>
+                  <div>
+                    <input class="mr-2" type="radio" id="three" value="3" name="household-number"><label class="mr-3" for="three">3</label>
+                  </div>
+                  <div>
+                    <input class="mr-2" type="radio" id="four" value="4" name="household-number"><label class="mr-3" for="four">4</label>
+                  </div>
+                  <div>
+                    <input class="mr-2" type="radio" id="five" value="5" name="household-number"><label class="mr-3" for="five">5</label>
+                  </div>
                 </div>
               </div>
             </li>
@@ -112,11 +122,11 @@
       <div class="about-banner">
         <div class="bg"></div>
         <div class="banner-text">
-          <h1 class="display-4 about-title">About this project</h1>
+          <h1 class="about-title">About this project</h1>
         </div>
       </div>  <!-- about-body -->
 
-      <div>
+      <div class="container">
         <div class="row">
           <div class="col-md-6 offset-md-3">
            <p>This project was inspired and powered by the Women Who Code (<a href="https://www.womenwhocode.com">https://www.womenwhocode.com</a>) 5th Austin Diversity Hackathon (2019) and Open Austin (<a href="https://www.open-austin.org/projects/">https://www.open-austin.org/projects/</a>").
@@ -127,11 +137,15 @@
               We look forward to expanding this project to include other information clients find helpful in making better financial decisions.
               Please contact alexandra@alexandrahubbard.com for information you'd like to see on this app and/or add some your ideas and join the project here: <a href="https://github.com/social-housing/affordable-housing-atx">https://github.com/social-housing/affordable-housing-atx</a>.</p>
 
+
+              <p>Special thanks to the original Hackathon team that brought this idea to life: Stephanie Caulley, Steven De Avila, Charisse Giles, Devin Dias and Alexandra Hubbard. </p>
+
               <p>Special thanks to the original Hackathon team that brought this idea to life: Stephanie Caulley, Steven De Avila, Charisse Giles and Alexandra Hubbard. </p>
 
+ master
           </div>
         </div>
-      </div>  <!-- /about-body -->
+      </div><!-- /about-body -->
     </section><!-- /about-me -->
 
     <!--add-resources-->
@@ -139,10 +153,10 @@
       <div class="resources-banner">
         <div class="bg"></div>
         <div class="banner-text">
-          <h1 class="display-4 resource-title">Additional Resources</h1>
+          <h1 class="resource-title">Additional Resources</h1>
         </div>
       </div>
-      <div>
+      <div class="container">
         <div class="row">
           <div class="col-md-6 offset-md-3">
             <p>To contribute and use this project: <a href="https://github.com/social-housing/affordable-housing-atx">https://github.com/social-housing/affordable-housing-atx</a></p>

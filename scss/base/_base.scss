@@ -5,7 +5,7 @@
 
 
 body {
-  font-family: 'Roboto', 'Helvetica' ,sans-serif;
+  font-family: 'Comfortaa', 'Helvetica' ,sans-serif;
   background-color: $color-primary;
   color: $white;
 }
@@ -26,16 +26,24 @@ body {
   margin-top: 3rem;
 }
 
-// .form-banner h1,
-// .form-banner p {
-//
-// }
-//
-
+h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  @include mq('md') {
+    font-size: 3rem;
+  }
+  @include mq('lg') {
+    font-size: 4rem;
+  }
+}
 
 .lead {
   width: 80%;
   margin: 0 auto;
+  font-size: 1rem;
+  @include mq('md') {
+    font-size: 1.3rem;
+  }
 }
 
 .about-title,
@@ -44,7 +52,6 @@ body {
     margin-left: 8rem;
     margin-top: 6rem;
   }
-
   @include mq('lg') {
     margin-left: 15rem;
     margin-top: 6rem;
@@ -101,6 +108,7 @@ a {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 0;
 }
 
 #result-display li {
@@ -113,4 +121,9 @@ a {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }

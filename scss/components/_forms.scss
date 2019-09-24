@@ -28,13 +28,37 @@ li {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 60%;
+  width: 90%;
   padding-left: 0;
 }
 
 .contact-info li {
   align-content: flex-start;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 1rem;
+  @include mq('md') {
+    flex-direction: row;
+  }
+}
+
+.news-heading {
+  display: flex;
+  flex-direction: column;
+  @include mq('md') {
+    flex-direction: row;
+  }
+}
+
+.radio-buttons {
+  display: flex;
+  flex-direction: row;
+  @include mq('lg') {
+    margin-left: .7rem;
+  }
+  @include mq('xl') {
+    margin-left: 3rem;
+  }
 }
 
 .text-field {
@@ -63,10 +87,14 @@ li {
 
 .income label,
 .zipcode label {
-  width: 30%;
+  @include mq('md') {
+    width: 30%;
+  }
 }
 
 .income input,
 .zipcode input {
-  width: 70%;
+  @include mq('md') {
+    width: 70%;
+  }
 }
