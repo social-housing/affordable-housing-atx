@@ -1,28 +1,40 @@
 let button = document.querySelector('#submit');
 
-function computeRent(item, request) {
-  const householdNumber = request.household;
-  const key = `_${householdNumber}_person_household`;
+function computeRent(item, request, key) {
   const income = parseInt(item[key]);
   const rent = (income * 0.3)/12;
   return rent;
 }
 
-function makeUrl(request) {
-  const zip_code = request.zip_code;
-  const url = `https://data.austintexas.gov/resource/ngxp-99y3.json?zip_code=${zip_code}`;
-  return url;
+function createHouselholdKey(request) {
+  const householdNumber = request.household;
+  const key = `_${householdNumber}_person_household`;
+  return key;
+}
+
+function errorMessage() {
+  return '<p>There is no data available for that zip code.';
 }
 
 function locationDisplay(items, request) {
-  const results = items.map(item => {
-    const rent = computeRent(item, request);
-    return `<li>
+  const household = createHouselholdKey(request);
+  const filtered = items.filter(item => {
+    return request.income < parseInt(item[household]);
+  });
+
+  if (filtered.length < 1) {
+    const error = errorMessage();
+    return error;
+  } else {
+    const results = filtered.map(item => {
+      const rent = computeRent(item, request, household);
+      return `<li>
       ${item.project_name}<br> ${item.address} ${item.zip_code}<br>
       Estimated rent: $${rent}
     </li>`;
-  }).join('\n');
-  return `<ul>${results}</ul>`;
+    }).join('\n');
+    return `<ul>${results}</ul>`;
+  }
 }
 
 function resultDisplay(data, request) {
@@ -30,15 +42,10 @@ function resultDisplay(data, request) {
   resultDiv.innerHTML = locationDisplay(data, request);
 }
 
-function householdValue() {
-  let ele = document.getElementsByName('household-number');
-  let result;
-  for (let i = 0; i < ele.length; i++) {
-    if(ele[i].checked) {
-      result = ele[i].value;
-    }
-  }
-  return result;
+function makeUrl(request) {
+  const zip_code = request.zip_code;
+  const url = `https://data.austintexas.gov/resource/ngxp-99y3.json?zip_code=${zip_code}`;
+  return url;
 }
 
 function callApi(request) {
@@ -75,11 +82,19 @@ function checkZipCode(request) {
     callApi(request);
   } else {
     const resultDiv = document.querySelector('#result-display');
-    const paragraph = document.createElement('p');
-    const message = document.createTextNode('There is no data available for that zip code.');
-    paragraph.appendChild(message);
-    resultDiv.appendChild(paragraph);
+    resultDiv.innerHTML = errorMessage();
   }
+}
+
+function householdValue() {
+  let ele = document.getElementsByName('household-number');
+  let result;
+  for (let i = 0; i < ele.length; i++) {
+    if(ele[i].checked) {
+      result = ele[i].value;
+    }
+  }
+  return result;
 }
 
 button.addEventListener('click', async (event) => {
